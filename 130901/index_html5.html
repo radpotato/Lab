@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 Case</title>
+		<style>
+			@media (-webkit-pixel-ratio:1) {
+				body {background:url('img_x1.gif');}
+			}
+			@media (-webkit-pixel-ratio:2) {
+				body {background:url('img_x2.gif');}
+			}
+			@media (-webkit-pixel-ratio:3) {
+				body {background:url('img_x3.gif');}
+			}
+			/* 320 x 480 (아이폰) */
+			/* 320 x 480 (해상도) 1:1; */ 
+			/* 640 x 960 (해상도) 1:2; */ 
+			/* 960 x 1440 (해상도) 1:3; */ 
+
+		</style>
+	</head>
+	<body>
+		<!-- 
+			Content Model === 7가지
+			Flow Content
+				// 흐르는 콘텐츠
+				// meta 일부를 제외한 모든 콘텐츠 (태그)
+			Heading Content
+				// 머릿말
+			Sectioning Content
+				// 섹션
+				// section, article
+			Pharsing Content
+				// a, abbr, audio, video
+				// HTML 자체적으로 한다기보다는 뭔가 외부에서 온.. 외계인...
+			Embedded Content
+				// audio, video, embed, img
+				// 소스가 외부에 있는 것들.
+			Interactive Content
+				// 사용자들의 인터렉션이나 반응을 유발하는 콘텐츠.
+				// video, audio, button, input
+			Metadata Content
+				// meta, style, script, title
+				// 문서의 상황이나 기타등등을 정의하는.
+		-->
+		<a href="#"> <!-- Pharsing Content && Flow Content -->
+			<div></div> <!-- Flow content -->
+		</a>
+	</body>
+</html>

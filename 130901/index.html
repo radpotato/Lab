@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Front End Beginner HTML 4.01</title>
+		<style type="text/css">
+			body {font-family: dotum,arial,sans-serif}
+			img {width:100px;}
+			.good img {display : block;} /* display model 조정 */
+			/*
+				display
+					block
+					inline
+					inline-block
+					table
+					table-cell 상하좌우 중간정렬
+					none
+			*/
+		</style>
+	</head>
+	<body>
+		<h1>Content Model</h1>
+		<div>
+			<p>XHTML === HTML 4.01 (같은 콘텐츠 모델 공유)</p>
+			<!-- 같은 명세서의 내용을 참고하고 있다. -->
+			<p>Content Model</p>
+				<ul>
+				<li>논리 구조</li>
+				<li>모든 태그(a,b,abbr)는 콘텐츠 모델을 가진다.</li>
+				<li>Box Model도 모두 가짐.</li>
+			</ul>
+			<h2>Block</h2>
+			- 한줄을 통째로 차지해요.<br/>
+			- 레이아웃을 짤 때 사용되요. <br/>
+			- inline이건 block이건 감싸는게 가능해요.
+			&lt;div&gt;&lt;/div&gt;
+			<h2>Inline</h2>
+			- 한줄을 통쨰로 차지하진 않아요.<br/>
+			- 세심한 스타일을 줄 때 많이 사용되요. <br/>
+			- block을 감싸지 못해요. inline은 감쌀 수 있어요.
+			&lt;span&gt;&lt;/span&gt;
+			<div>
+				안녕?
+				<div>안녕못해</div>
+				그래?
+			</div>
+			<div>
+				안녕?
+				<span>안녕못해</span>
+				그래?
+			</div>
+			<ul>
+				<li>
+					<!-- invaild case -->
+					<a href="#">
+						<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/1006348_605159729535681_1939035826_n.jpg" alt=""/><!-- inline -->
+						<p>안녕 디지몬</p><!-- block -->
+					</a> <!-- inline -->
+				</li>
+				<li>
+					<!-- invaild case-->
+					<a href="#"><img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/1006348_605159729535681_1939035826_n.jpg" alt="안녕 디지몬"/></a>
+					<p><a href="#">안녕 디지몬</a></p>
+					<!-- 문법은 맞았어요 -->
+					<!-- 접근성이 어긋나요 -->
+					<!-- 스크린 리더가 어떻게 읽을까요? 
+						목록 안녕 디지몬 이미지 링크
+						안녕 디지몬 링크
+					-->
+				</li>
+				<li class="good">
+					<a href="#">
+						<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/1006348_605159729535681_1939035826_n.jpg" alt=""/>
+						안녕 디지몬
+					</a>
+				</li>
+			</ul>
+			<h2>Content Model Markup case</h2>
+			<ol>
+				<li>ol태그나 ul태그는 직계 자손은 li만 감쌀 수 있다</li>
+				<li>p태그는 다른 p태그를 안고있을 수 없다.
+					<p><!-- block -->
+						<p></p> <!-- block -->
+					</p><!-- 문장 -->
+				</li>
+				<li>a태그는 다른 a태그를 감쌀 수 없다.
+					<a href="#">
+						<a href="#"></a>
+					</a><!-- 링크 안에 링크? -->
+				</li>
+			</ol>
+		</div>
+	</body>
+</html>
