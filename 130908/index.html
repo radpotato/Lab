@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Front End 2013-09-08</title>
+		<style>
+			button {padding:0;margin:0;border:0;background:none;cursor:pointer;}
+		</style>
+	</head>
+	<body>
+		<!--
+			1. 마크업 구조
+				1.1. 인터렉션 구조
+				1.2. 시멘틱 마크업 (의미론적인 마크업)
+			2. 레이아웃
+				2.1. 방탄웹 (Bulletproof web design)
+				2.2. div태그 레이아웃 (Containing Devision)
+				2.3. 마진 병합 현상 (collapsping Margin)
+				2.4. Float, Flex box
+				2.5. Positioning
+			3. Q&A
+		-->
+		<!-- 
+			인터렉션 구조
+			- 1개의 Tag추가
+			
+			브라우저 작동할 때
+			div.rating .rating-list ul li input
+				div(파싱)
+				.rating(찾아내기(색인indexing))
+			모든 태그
+				h1 > ul > li > label > input > label > li >
+				li @@루프 > ul > div
+			.rating-list(찾아내기(색인 indexing))
+				h1 > ul > li > label > input > label > li >
+				li @@루프 > ul > div
+			h1 { }
+				h1 > ul > li > label > input > label > li >
+				li @@루프 > ul > div
+			reflow 현상
+				- 페이지 리로드 현상
+			repaint 현상
+		-->
+		<div id="wrap">
+			<header></header><!--헤더일거 같고...-->
+			<section></section><!-- 섹션일거 같고...-->
+			<footer></footer><!-- 푸터일거 같고... 카피라이트...-->
+		</div>
+
+		<div id="wrap">
+			<div id="hedaer" role="헤더">
+				<p>안녕 디지몬?<br/>내 꿈을 꾸면서 잠이들래?<br/></p> 
+				<!-- 파라그래프 (문장) -->
+				<blockquote></blockquote>
+				<i></i>
+				<cite></cite>
+				<b></b><!-- bold -->
+				<!-- 마크업과 스타일은 구분해야한다 -->
+				<strong></strong>
+				<!-- 강조 -->
+				<base></base>
+			</div> <!-- WAI ARIA -->
+			<div id="section" role="섹션"></div>
+			<div id="footer" role="푸터"></div>
+		</div>
+		<form name="login" action="#" method="post">
+			<input type="text" name="userName" placeholder="apes0123@gmail.com">
+			<input type="submit" value="hello world">
+		</form>
+		<a href="#">안녕</a>
+		<!-- 페이지이동 -->
+		<button type="button" onclick="alert('안녕 못해')">안녕</button><!-- 자바스크립트 인터렉션 -->
+		<script>
+			var login = document.login;
+			var Logining = function() {
+				if(login.userName.value === "") {
+					alert("유저명을 입력하고 접속해주세요");
+					login.userName.focus();
+					return;
+				}
+			}
+			login.onsubmit = Logining;
+			/*
+			var hello = document.getElementById("hello"),
+			str = "";
+			for(i=0;i<1000;i++) {
+				str += "<p>안녕디지몬</p>";
+			};
+			hello.innerHTML = str;
+			/* innerHTML IE시작 */
+			/* ECMA Script 3까지는 음슴 */
+			/* ECMA Script 4 추가 */
+		</script>
+	</body>
+</html>
