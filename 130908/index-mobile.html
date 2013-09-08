@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mobile Layout 2013-09-08</title>
+		<meta name="viewport" content="initial-scale=1, width=device-width">
+		<!--
+			@viewport {
+				initial-scale : 1(default) ~ 5
+				maximum-scale : 5(default) ~ 1 (최대확대크기)
+				minimum-scale : 0.1 ~ 5
+				width : (px) | device-width
+				user-scalable : yes | no (boolean)
+			}
+		-->
+		<!--
+			아이폰 : 320px;
+			갤럭시 : 480px, 360px;
+			베가 : 480px;
+			갤럭시 노트 : 640px;
+			ipad : 768px;
+			http://techhtml.org/Lab/130908_frontend/
+		-->
+		<style>
+			body {margin:0;}
+			h1 {margin: 0}
+			header {width:100%;background:#666;}
+			main {width:100%;}
+			main:after {content:'';display:block;clear:both;}
+			main section {width:100%;word-break:break-all;}
+			main aside {width:100%;word-break:break-all;}
+			nav ul {padding:0;margin:0;}
+			nav ul li {float:left;width:50%;margin:0;padding:0;list-style: none;}
+			@media (min-device-width:320px) {
+				nav ul li {width:50%;}
+			}
+			@media (min-device-width:440px){
+				nav ul li {width:33.3%;}
+			}
+			@media (min-device-width:560px){
+				nav ul li {width:25%;}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Mobile Layout 100% -->
+		<header>
+			<h1>NATE</h1>
+			<h2>SEARCH</h2>
+		</header>
+		<main>
+			<section>NATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATE</section>
+			<aside>NATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATENATE</aside>
+		</main>
+		<nav>
+			<ul>
+				<li><img src="http://dthumb.phinf.naver.net/?src=http://static.naver.net/www/u/2013/0906/mma_154851229.jpg&type=main&qlt=80&twidth=184&theight=140" width="92" height"80"alt="">안녕</li>
+				<li><img src="http://dthumb.phinf.naver.net/?src=http://static.naver.net/www/u/2013/0906/mma_154851229.jpg&type=main&qlt=80&twidth=184&theight=140" width="92" height"80"alt="">안녕</li>
+				<li><img src="http://dthumb.phinf.naver.net/?src=http://static.naver.net/www/u/2013/0906/mma_154851229.jpg&type=main&qlt=80&twidth=184&theight=140" width="92" height"80" alt="">안녕</li>
+				<li><img src="http://dthumb.phinf.naver.net/?src=http://static.naver.net/www/u/2013/0906/mma_154851229.jpg&type=main&qlt=80&twidth=184&theight=140" width="92" height"80" alt="">안녕</li>
+			</ul>
+		</nav>
+	</body>
+</html>

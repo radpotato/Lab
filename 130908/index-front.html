@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Front End Biginner 13-09-08</title>
+		
+		<!-- XHTML, HTML-->
+		<style type="text/css"></style>
+		<!--HTML5 -->
+		<style>
+			#wrap {width:970px;margin:0 auto;}
+			#header { }
+			#container {float:left;}
+			/* 1. #container {float:left;}*/
+			/* 2. #container {overflow:hidden;}*/
+			/* 3. #container div.clear {clear:both;}*/
+			/* 4. 빈 태그 추가
+				#container {*zoom:1;}
+				#container:after {content:" "; display:block; clear:both;}
+			*/
+			#content {float:left;width:700px;min-height:600px;}
+			#aside {float:left;width:270px;}
+			#footer { } /* clearing floats */
+		</style>
+	</head>
+	<body>
+		<h1>Layout</h1>
+		<!-- XHTML || HTML -->
+		<div id="wrap">
+			<div id="header"></div>
+			<div id="container">
+				<div id="content">
+					<h1>#2. 순례를 떠나기 위한 준비를 하는 자들</h1>
+					<h2>소개</h2>
+<abbr>
+네가 진정 그 무언가를 간절히 바라고 원할 땐, 세상 천지 모든
+만물이 네가 그것을 이룰 수 있도록 도와줄 것이다.
+- 책 "연금술사" 중에서
+</abbr>
+<h3>이 아티클도 읽으면 좋습니다</h3>
+<ul>
+<li><a href="http://ko.wikipedia.org/wiki/웹_표준">웹 표준</a></li>
+<li><a href="http://ko.wikipedia.org/wiki/W3C">W3C</a></li>
+</ul>
+
+다음 아티클은 "#3. HTML이 뭔지 모르신다구요?"를 해볼 예정이다.
+				<div class="clear"></div>
+				</div>
+				<div id="aside">
+					<ul>
+						<li><a href="#">#2. 순례를 떠나기 위한 준비를 하는 자들</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="footer">copyright all right reserved cho eun in sk communications</div>
+		</div>
+		<!-- HTML5 -->
+		<main>
+			<header></header>
+			<div>
+				<section></section>
+				<aside></aside>
+			</div>
+			<footer></footer>
+		</main>
+
+	</body>
+</html>
